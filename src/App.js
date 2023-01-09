@@ -1,5 +1,4 @@
 // Import the useState hook from react
-import React from 'react';
 import { useState, useEffect } from 'react';
 import './App.css';
 import Form from './components/Form';
@@ -11,7 +10,7 @@ function App() {
 
   // state to hold movie data - movie is a object
   // Add React.useState
-  const [movie, setMovie] = React.useState(null);
+  const [movie, setMovie] = useState(null);
 
   // Function to getMovies
   const getMovie = async (searchTerm) => {
@@ -27,7 +26,7 @@ function App() {
 
   // This will run on the first render but not on subsquent renders
   useEffect(() => {
-    getMovie('Clueless');
+    getMovie('Perfect Blue');
   }, []);
 
   //We pass the getMovie functio as a prop
