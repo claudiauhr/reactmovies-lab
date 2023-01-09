@@ -1,3 +1,4 @@
+// Import the useState hook from react
 import { useState } from 'react';
 import './App.css';
 import Form from './components/Form';
@@ -26,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <Form getMovie={getMovie} />
-      <MovieDisplay />
+      <MovieDisplay movie={movie} />
     </div>
   );
 }
